@@ -1,89 +1,110 @@
-/* Reset */
-* {
+body {
+  background: #0a0014;
   margin: 0;
-  padding: 0;
+  font-family: "Press Start 2P", monospace;
+}
+
+.container {
+  text-align: center;
+  color: #39ffdc;
+  padding-top: 20px;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #39ffdc;
+}
+
+.maze {
+  width: fit-content;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(21, 20px);
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
   box-sizing: border-box;
 }
 
-body {
-  background: #1a1a1a;
-  font-family: 'Press Start 2P', monospace;
-  color: white;
+/* Glowing pink path */
+.path {
+  background: #0a0014;
+  box-shadow: 0 0 8px #0a0014;
 }
 
-/* Game container */
-.game-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Neon dark wall */
+.wall {
+  background: #ff2bb5;
+  box-shadow: 0 0 4px #ff2bb5;
+}
+
+/* Player - neon green square */
+.player {
+  background: #00ff9c;
+  box-shadow: 0 0 10px #00ff9c;
+}
+
+/* Goal / gift */
+.goal {
+  background: #ffdd00;
+  box-shadow: 0 0 12px #ffdd00;
+  border-radius: 3px;
+}
+
+/* Controls */
+.controls {
   margin-top: 20px;
 }
 
-/* Title */
-.title {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #ff77ff;
-  text-shadow: 0 0 6px #ff29ff;
-}
-
-/* Maze grid */
-.maze {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(12, 32px);
-  grid-template-rows: repeat(12, 32px);
-  image-rendering: pixelated;
-}
-
-/* Wall tile */
-.wall {
-  background: #ff52d9;
-  border: 2px solid #ff94ea;
-}
-
-/* Floor tile */
-.floor {
-  background: #222;
-  border: 1px solid #444;
-}
-
-/* PLAYER sprite */
-.player {
-  position: absolute;
-  width: 28px;
-  height: 28px;
-  background: #5bff8c;
-  border: 3px solid #1bff5e;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #4aff7c;
-  image-rendering: pixelated;
-}
-
-/* Mobile controls */
-.controls {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .controls button {
-  width: 55px;
-  height: 55px;
-  background: #ff73f8;
+  background: #ffcc66;
   border: none;
-  border-radius: 10px;
+  padding: 14px;
+  margin: 5px;
+  border-radius: 8px;
   font-size: 20px;
-  box-shadow: 0 0 10px #ff34ea;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffcc66;
+  transition: 0.15s;
 }
 
-.controls .mid {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.controls button:hover {
+  transform: scale(1.1);
 }
 
-.controls button:active {
-  background: #ffa3ff;
+/* Popup message */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 14px;
+  color: #39ffdc;
+  width: 300px;
+  box-shadow: 0 0 20px #39ffdc;
+}
+
+.popup button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #39ffdc;
+  border: none;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.newMazeBtn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #39ffdc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
 }
