@@ -1,0 +1,93 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1b1b1b;
+  font-family: 'Press Start 2P', monospace;
+  color: #fff;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+/* Pixel style */
+.pixel-border {
+  image-rendering: pixelated;
+  border: 4px solid #ff6bf0;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+/* Maze container */
+.maze-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Canvas */
+canvas {
+  background: #222;
+  image-rendering: pixelated;
+  border: 4px solid #ff82ff;
+  border-radius: 8px;
+}
+
+/* D-pad layout */
+.dpad-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 12px;
+  touch-action: none;
+}
+
+.dpad-btn {
+  width: 55px;
+  height: 55px;
+  background: #ff7ee6;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 0 10px #ff64da;
+  image-rendering: pixelated;
+}
+
+.dpad-btn:active {
+  background: #ffa6f5;
+}
+
+/* Up button centered */
+.dpad-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Victory text */
+.win-text {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  color: #90ff9c;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .dpad-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  canvas {
+    width: 260px !important;
+    height: 260px !important;
+  }
+}
