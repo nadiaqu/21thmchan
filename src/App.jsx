@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "./App.css";
+import "./assets/App.css";
 
 // LABYRINTH MAP (1 = wall, 0 = path)
 const MAP = [
