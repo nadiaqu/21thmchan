@@ -79,11 +79,11 @@ export default function App() {
   Happiest b'day, mchan!🎁💖 <br><br>
   sebelumnya maaf banget aku udah terlanjur namain projectnya 21thmchan
   padahal kamu baru 20 tahun (maaf banget) (sekali lagi maaf) 
-  click <a href="https://write.as/suratcintauntukmchan" target="_blank">this</a> for longer message. maaf juga kalo warnanya neon menyala
+  click <a href="https://www.circularbit.com/rewritetext/livetext/119136/0" target="_blank">this</a> for longer message. maaf juga kalo warnanya neon menyala
   <br><br>
   crafted with 💖, nad.
 `);
-
+///janlup url-nya diganti ya hehe
   }
 
   return (
@@ -97,7 +97,7 @@ export default function App() {
         </div>
       )}
 
-      <div className="maze">
+      <div className="maze"> 
         {maze.map((row, y) =>
           row.map((cell, x) => {
             const isPlayer = player.x === x && player.y === y;
@@ -113,7 +113,7 @@ export default function App() {
                     ? "cell goal"
                     : cell === 1
                     ? "cell wall"
-                    : "cell path"
+                    : "cell path" 
                 }
               />
             );
@@ -121,7 +121,7 @@ export default function App() {
         )}
       </div>
 
-      <div className="controls">
+      <div className="controls">  
         <button onClick={() => move(0, -1)}>▲</button>
         <div className="middle">
           <button onClick={() => move(-1, 0)}>◀</button>
